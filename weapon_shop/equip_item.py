@@ -19,7 +19,7 @@ def equip_item(person,weapon):
             "message":"เงินไม่พอ"
         }
     person["money"] -= weapon["price"]
-    person["equipment"] =weapon["name"]
+    person["equipment"] == weapon["name"]
     person["power"] += weapon["bonus"]
     return {
         "status": True,

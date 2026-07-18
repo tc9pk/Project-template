@@ -15,10 +15,7 @@ from data import family_members
 
 def add_member(name, age, power, money):
 
-    name = input("Enter name: ")
-    age = int(input("Enter age: "))
-    power = int(input("Enter power: "))
-    money = float(input("Enter money: "))
+
 
     if power >= 8:
         role = "Hitman"
@@ -33,7 +30,7 @@ def add_member(name, age, power, money):
         "role": role,
         "power": power,
         "money": money,
-        "equiment": "ไม่มี"
+        "equipment": "ไม่มี"
     }
 
     family_members.append(new_member)
