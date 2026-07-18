@@ -7,8 +7,25 @@
 #   - เช็คอาวุธ: person มีอาวุธอยู่แล้ว (equipment ไม่ใช่ "ไม่มี") -> ใส่เพิ่มไม่ได้
 #   - ผ่านทั้งคู่ -> หักเงิน, เปลี่ยน equipment เป็นชื่ออาวุธ, บวก bonus เข้า power
 #   - return {"status": True/False, "message": ข้อความบอกผล}
-
-
+def equip_item(person,weapon):
+    if person["equipment"] != "ไม่มี":
+        return {
+        "status":False,
+        "message":"มีอาวุธแล้ว"
+    }
+    if person["money"] < weapon["price"]:
+        return {
+            "status": False,
+            "message":"เงินไม่พอ"
+        }
+    person["money"] -= weapon["price"]
+    person["equipment"] =weapon["name"]
+    person["power"] += weapon["bonus"]
+    return {
+        "status": True,
+        "message": "ซื้อและติดตั้งอาวุธสำเร็จ"
+    }           
+        
 # ทดสอบ: python -m weapon_shop.equip_item
 if __name__ == "__main__":
     vito = {"name": "Vito", "money": 60000, "power": 5, "equipment": "ไม่มี"}
@@ -17,3 +34,4 @@ if __name__ == "__main__":
     print(equip_item(vito, gun))   # ต้องได้ status True
     print(vito)                    # เงินเหลือ 10000, power เป็น 10, equipment เป็นปืน
     print(equip_item(vito, gun))   # ครั้งที่สองต้องได้ status False (มีอาวุธแล้ว)
+
