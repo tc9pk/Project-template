@@ -10,13 +10,15 @@ from data import family_members
 #   - สร้าง dict สมาชิกใหม่ (key: name, age, role, power, money, equipment เริ่มต้น "ไม่มีั")
 #   - เพิ่มเข้า family_members แล้ว return dict นั้น
 
-name = input("Enter name: ")
-age = int(input("Enter age: "))
-power = int(input("Enter power: "))
-money = float(input("Enter money: "))
+
 
 
 def add_member(name, age, power, money):
+
+    name = input("Enter name: ")
+    age = int(input("Enter age: "))
+    power = int(input("Enter power: "))
+    money = float(input("Enter money: "))
 
     if power >= 8:
         role = "Hitman"
