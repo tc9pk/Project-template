@@ -1,12 +1,45 @@
 # =====================================================
-#  personnel/add_member.py — คนรับผิดชอบ: ______________________
+#  personnel/add_member.py — คนรับผิดชอบ: Tong
 # =====================================================
+
 from data import family_members
+
 
 # TODO: สร้างฟังก์ชัน add_member(name, age, power, money)
 #   - คำนวณ role: power >= 8 -> "Hitman" | money >= 1000000 -> "Sponsor" | นอกนั้น -> "Slave"
-#   - สร้าง dict สมาชิกใหม่ (key: name, age, role, power, money, equipment เริ่มต้น "ไม่มี")
+#   - สร้าง dict สมาชิกใหม่ (key: name, age, role, power, money, equipment เริ่มต้น "ไม่มีั")
 #   - เพิ่มเข้า family_members แล้ว return dict นั้น
+
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+power = int(input("Enter power: "))
+money = float(input("Enter money: "))
+
+
+def add_member(name, age, power, money):
+
+    if power >= 8:
+        role = "Hitman"
+    elif money >= 1000000:
+        role = "Sponsor"
+    else:
+        role = "Slave"
+    return role
+
+a = add_member(name, age, power, money)
+
+new_member = {
+    "name": name,
+    "age": age,
+    "role": a,
+    "power": power,
+    "money": money,
+    "equiment": "ไม่มี"
+}
+
+family_members.append(new_member)
+
+
 
 
 # ทดสอบ: python -m personnel.add_member
