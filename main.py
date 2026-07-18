@@ -34,32 +34,33 @@ def main():
             print("\n--- เพิ่มลูกน้องใหม่ ---")
             # TODO: รับ name, age, power, money (age/power ใช้ int(), money ใช้ float())
             #       -> add_member(...) -> print เพิ่ม (ชื่อ) ในตำแหน่ง (role) เรียบร้อยแล้ว
-            print("!! เมนูนี้ยังไม่ถูกเชื่อม")
+            print(add_member(name, age, power, money))
+        
 
         # ---------- เมนู 2 ----------
         elif choice == '2':
             print("\n--- รายชื่อลูกน้องทั้งหมด ---")
             # TODO: เรียก show_members()
-            print("!! เมนูนี้ยังไม่ถูกเชื่อม")
+            print(show_members())
 
         # ---------- เมนู 3 ----------
         elif choice == '3':
             print("\n--- ค้นหาประวัติ ---")
             # TODO: รับชื่อ -> search_member() -> เจอ: print ข้อมูล | ไม่เจอ: print ไม่พบชื่อในระบบ
-            print("!! เมนูนี้ยังไม่ถูกเชื่อม")
+            print(serch_members(target_name))
 
         # ---------- เมนู 4 ----------
         elif choice == '4':
             print("\n--- สั่งเก็บลูกน้อง ---")
             # TODO: รับชื่อ -> remove_member() -> True: print สั่งเก็บเรียบร้อย | False: print ไม่พบชื่อในระบบ
-            print("!! เมนูนี้ยังไม่ถูกเชื่อม")
+            print(remove_members(target_name))
 
         # ---------- เมนู 5 ----------
         elif choice == '5':
             print("\n=== คลังอาวุธ ===")
             # TODO: show_catalog() -> รับรหัสอาวุธ (หาใน weapons_catalog) -> รับชื่อคน (search_member())
             #       -> equip_item() -> print ข้อความผล และถ้าสำเร็จ print ค่าพลังใหม่
-            print("!! เมนูนี้ยังไม่ถูกเชื่อม")
+            print(show_catolog())
 
         # ---------- เมนู 6 (OPTIONAL) ----------
         elif choice == '6':
