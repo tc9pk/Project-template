@@ -26,21 +26,19 @@ def add_member(name, age, power, money):
         role = "Sponsor"
     else:
         role = "Slave"
-    return role
 
-a = add_member(name, age, power, money)
+    new_member = {
+        "name": name,
+        "age": age,
+        "role": role,
+        "power": power,
+        "money": money,
+        "equiment": "ไม่มี"
+    }
 
-new_member = {
-    "name": name,
-    "age": age,
-    "role": a,
-    "power": power,
-    "money": money,
-    "equiment": "ไม่มี"
-}
+    family_members.append(new_member)
 
-family_members.append(new_member)
-
+    return new_member
 
 
 
