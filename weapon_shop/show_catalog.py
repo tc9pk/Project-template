@@ -5,6 +5,10 @@ from data import weapons_catalog
 
 # TODO: สร้างฟังก์ชัน show_catalog()
 #   - print อาวุธทุกชิ้นใน weapons_catalog บรรทัดละชิ้น (รหัส, ชื่อ, ราคา, พลังโบนัส)
+def show_catalog():
+    for i in weapons_catalog:
+        item = weapons_catalog[i] 
+        print(i, item["name"] , item["price"] , item["bonus"])
 
 
 # ทดสอบ: python -m weapon_shop.show_catalog
